@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+Sitemap: https://contractor-starter-shell.pages.dev/sitemap.xml

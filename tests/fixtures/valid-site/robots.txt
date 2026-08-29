@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://contractor-v5-2-test.pages.dev/sitemap.xml
