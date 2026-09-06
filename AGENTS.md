@@ -1,4 +1,4 @@
-# Codex operating instructions — Contractor Website V5.2
+# Codex operating instructions — Contractor Website V5.3
 
 These instructions apply to every Codex task in this repository.
 
@@ -12,7 +12,7 @@ Use evidence in this order:
 2. `handoff/APPROVED_BUILD_BRIEF.md` and `handoff/DESIGN_LOCK.json`.
 3. Approved public facts in `handoff/PUBLIC_BUSINESS_FACTS.json`.
 4. The current production website in `public/`.
-5. The connected V5.2 Contractor Website Starter Pack and private business-assets source, when available in the current context.
+5. The connected V5.3 Contractor Website Program source and private business-assets source, when available in the current context.
 
 Never invent a business fact. A missing or conflicting fact is a blocker for that claim, not permission to guess.
 
@@ -40,6 +40,9 @@ Never commit the private business-assets source, raw review evidence, owner inte
 
 - Work on a branch and request review. Do not push ordinary desktop website work directly to `main`.
 - Edit real files in `public/`; the root ZIP is only the approved phone transport route.
+- Treat the committed starter `public/` as a disposable safety shell, never as a visual template. For the first production build, remove every starter-only page and asset and create the real website from a blank canvas.
+- Do not preserve or imitate the safety shell's page list, markup, class names, layout, colors, typography, components, CSS, or JavaScript. Derive the entire visual system from the contractor's approved facts, trade, customers, proof, service area, media, and inferred business vibe.
+- Original local fonts, SVG artwork, icons, textures, imagery, animation, and JavaScript are welcome when they support the contractor's distinct character, remain accessible and performant, and pass the public-output policy.
 - Preserve the owner-approved Design Lock unless the owner approves a redesign.
 - When replacing an existing website, use `handoff/LEGACY_URL_PLAN.json` and preserve every old public URL at the same path by default. Use a permanent redirect only when its exact source and destination are owner-approved. Never send a collection of old pages to the homepage.
 - Treat services, service areas, address publication, telephone numbers, hours, emergency or 24/7 availability, response times, prices, financing, warranties, licenses, insurance, bonding, certifications, years in business, reviews, awards, and project claims as evidence-sensitive.
@@ -53,7 +56,9 @@ Never commit the private business-assets source, raw review evidence, owner inte
 - Do not add analytics, advertising pixels, chat widgets, embeds, or marketing forms without owner approval and the necessary privacy decision.
 - Keep form recipients and secrets in the deployment environment. A Turnstile widget action must exactly match `TURNSTILE_EXPECTED_ACTION`.
 
-For every production change, keep `site-manifest.json` and `version.json` synchronized. Schema version is `2.1`, workflow version is `5.2`, and repository package spec is `5.2`. Each manifest page uses a canonical relative `file_path` plus root-relative `url_path` and `canonical_url_path`. Keep the complete generated favicon family declared and linked from every HTML page.
+For every production change, keep `site-manifest.json` and `version.json` synchronized. The V5.3 course intentionally retains repository compatibility with schema version `2.1`, workflow version `5.2`, and repository package spec `5.2`; do not bump those values in an individual business build. Each manifest page uses a canonical relative `file_path` plus root-relative `url_path` and `canonical_url_path`. Keep the complete generated favicon family declared and linked from every HTML page.
+
+GitHub `main` is the final website source of truth and Cloudflare Pages is the final host. A ChatGPT Sites URL may be used only as a temporary design preview. Never describe a ChatGPT Sites preview as the finished launch, and never replace the GitHub-to-Cloudflare final path with it.
 
 ## Required gate before review
 
